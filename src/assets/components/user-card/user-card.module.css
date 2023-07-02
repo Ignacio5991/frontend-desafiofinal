@@ -1,0 +1,17 @@
+.container {
+  padding: 1.2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #00000060;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.user-summary-title {
+  font-weight: bold;
+}
