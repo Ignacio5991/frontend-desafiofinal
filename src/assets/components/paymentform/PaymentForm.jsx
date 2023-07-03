@@ -4,7 +4,7 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 import { createAlert, createAlertWithCallback } from "../../utils/alerts";
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import Button from "react-bootstrap/esm/Button";
 //hola mundo
@@ -24,7 +24,7 @@ const PaymentForm = () => {
   const handlerCleanCart = async () => {
     const { cart: cid } = JSON.parse(localStorage.getItem("usuarios"));
     try {
-      const response = await axios.delete(
+      await axios.delete(
         `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}`
       );
     } catch (error) {
