@@ -12,9 +12,9 @@ import styles from "./payment-form.module.css";
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const [setError] = useState(false);
-  const [setIsLoading] = useState(false);
-  const [setCart] = useState(null);
+  const [error, setError] = useState(false);
+  const [IsLoading, setIsLoading] = useState(false);
+  const [Cart, setCart] = useState(null);
   const { cart: cid } = JSON.parse(localStorage.getItem("usuarios"));
   const handlerPurchase = async () => {
     try {
