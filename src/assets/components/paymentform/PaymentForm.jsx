@@ -12,9 +12,7 @@ import styles from "./payment-form.module.css";
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const [useerror, setError] = useState(false);
-  const [IsLoading, setIsLoading] = useState(false);
-  const [Cart, setCart] = useState(null);
+
   const { cart: cid } = JSON.parse(localStorage.getItem("usuarios"));
   const handlerPurchase = async () => {
     try {
@@ -26,15 +24,12 @@ const PaymentForm = () => {
   const handlerCleanCart = async () => {
     const { cart: cid } = JSON.parse(localStorage.getItem("usuarios"));
     try {
-      setIsLoading(true);
       const response = await axios.delete(
         `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}`
       );
-      setCart(response.data.Carrito);
     } catch (error) {
-      setError(true);
+      console.log(error);
     }
-    setIsLoading(false);
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
