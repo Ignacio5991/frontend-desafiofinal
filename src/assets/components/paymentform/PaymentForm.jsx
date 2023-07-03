@@ -7,12 +7,12 @@ import { createAlert, createAlertWithCallback } from "../../utils/alerts";
 import React, { useState } from "react";
 import axios from "axios";
 import Button from "react-bootstrap/esm/Button";
-
+//hola mundo
 import styles from "./payment-form.module.css";
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const [error, setError] = useState(false);
+  const [useerror, setError] = useState(false);
   const [IsLoading, setIsLoading] = useState(false);
   const [Cart, setCart] = useState(null);
   const { cart: cid } = JSON.parse(localStorage.getItem("usuarios"));
