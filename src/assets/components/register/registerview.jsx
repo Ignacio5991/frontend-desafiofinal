@@ -15,7 +15,7 @@ function Register() {
 
   const registeruser = async () => {
     const res = await axios.post(
-      "https://ecomercebackend-production.up.railway.app/api/session/register/",
+      "https://jazzy-crepe-b6ee51.netlify.app/api/session/register/",
       {
         firstName: Firstname,
         lastName: Lastname,

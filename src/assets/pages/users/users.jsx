@@ -16,7 +16,7 @@ const Users = () => {
     try {
       setIsLoading(true);
       await axios.put(
-        "https://ecomercebackend-production.up.railway.app/api/users/",
+        "https://jazzy-crepe-b6ee51.netlify.app/api/users/",
         {
           id: userWithNewRole._id,
           user: userWithNewRole,
@@ -24,7 +24,7 @@ const Users = () => {
         { withCredentials: true }
       );
       const response = await axios.get(
-        "https://ecomercebackend-production.up.railway.app/api/users",
+        "https://jazzy-crepe-b6ee51.netlify.app/api/users",
         { withCredentials: true }
       );
 
@@ -39,12 +39,12 @@ const Users = () => {
     try {
       setIsLoading(true);
       await axios.delete(
-        "https://ecomercebackend-production.up.railway.app/api/users/" + id,
+        "https://jazzy-crepe-b6ee51.netlify.app/api/users/" + id,
         null,
         { withCredentials: true }
       );
       const response = await axios.get(
-        "https://ecomercebackend-production.up.railway.app/api/users",
+        "https://jazzy-crepe-b6ee51.netlify.app/api/users",
         { withCredentials: true }
       );
 
@@ -60,7 +60,7 @@ const Users = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          "https://ecomercebackend-production.up.railway.app/api/users",
+          "https://jazzy-crepe-b6ee51.netlify.app/api/users",
           { withCredentials: true }
         );
 

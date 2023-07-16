@@ -17,7 +17,7 @@ const PaymentForm = () => {
   const handlerPurchase = async () => {
     try {
       await axios.get(
-        `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}/purchase`
+        `hhttps://jazzy-crepe-b6ee51.netlify.app/api/cartsBd/${cid}/purchase`
       );
     } catch (error) {}
   };
@@ -25,7 +25,7 @@ const PaymentForm = () => {
     const { cart: cid } = JSON.parse(localStorage.getItem("usuarios"));
     try {
       await axios.delete(
-        `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}`
+        `https://jazzy-crepe-b6ee51.netlify.app/api/cartsBd/${cid}`
       );
     } catch (error) {
       console.log(error);
@@ -41,7 +41,7 @@ const PaymentForm = () => {
       createAlertWithCallback(
         "success",
         "¡Pago completado!",
-        "El pago ha sido procesado con éxito",
+        "El pago ha sido procesado con éxito, recibiras un mail con los detalles de la compra",
         () => window.location.replace("/home")
       );
       handlerCleanCart();

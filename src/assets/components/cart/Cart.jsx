@@ -19,10 +19,10 @@ function Cart() {
       setIsLoading(true);
 
       await axios.delete(
-        `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}/product/${pid}`
+        `https://jazzy-crepe-b6ee51.netlify.app/api/cartsBd/${cid}/product/${pid}`
       );
       const response = await axios.get(
-        `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}`
+        `https://jazzy-crepe-b6ee51.netlify.app/api/cartsBd/${cid}`
       );
       setCart(response.data);
     } catch (error) {
@@ -37,7 +37,7 @@ function Cart() {
     try {
       setIsLoading(true);
       const response = await axios.delete(
-        `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}`
+        `https://jazzy-crepe-b6ee51.netlify.app/api/cartsBd/${cid}`
       );
       setCart(response.data.Carrito);
     } catch (error) {
@@ -53,7 +53,7 @@ function Cart() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `https://ecomercebackend-production.up.railway.app/api/cartsBd/${cid}`
+          `https://jazzy-crepe-b6ee51.netlify.app/api/cartsBd/${cid}`
         );
         setCart(response.data);
         console.log(response);
