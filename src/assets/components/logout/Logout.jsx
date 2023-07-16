@@ -12,7 +12,7 @@ function Logout() {
   const navigate = useNavigate();
   const logoutnuser = async () => {
     const res = await axios.post(
-      "https://ecomercebackend-production.up.railway.app/api/session/logout/",
+      "https://jazzy-crepe-b6ee51.netlify.app/api/session/logout/",
       {
         email: Email,
         password: Password,

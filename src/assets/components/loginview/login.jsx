@@ -16,7 +16,7 @@ function Login() {
   const navigate = useNavigate();
   const loginuser = async () => {
     const res = await axios.post(
-      `https://ecomercebackend-production.up.railway.app/api/session/login/`,
+      `https://jazzy-crepe-b6ee51.netlify.app/api/session/login/`,
       {
         email: Email,
         password: Password,
